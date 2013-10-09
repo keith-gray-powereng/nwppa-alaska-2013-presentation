@@ -357,6 +357,46 @@ Team Structure
    :height: 166
    :scale: 300
 
+Testing
+=======
+
+Site Testing
+------------
+
+* Engineers who programmed the system were on site to commission it
+* Most, but not all, devices were available and connected
+* Unavailable devices were simulated using a test set capable of publishing
+  and subscribing to GOOSE messages
+* Test plans were followed, variances were noted and reviewed
+* SERs were captured at each step in the test plan
+
+Test Mode
+---------
+
+* Need a method of testing a relay without causing actions in receiving
+  relays
+* Similar to test switches
+* Only meant to be used when the protected device is out of service
+
+  * Breaker racked out or disconnect switches open
+  * Not meant to be use on an in-service relay
+
+* Transmitting relay is placed into test mode
+* Test mode indication is transmitted with each GOOSE message
+* If test mode is enabled, the receiving relay ignores the data in the
+  incoming GOOSE message
+* All receiving relays indicate they see the transmitting relay in test mode
+* SCADA indicates a relay is in test mode and that all receiving relays
+  agree
+
+Network Testing
+---------------
+
+* Network is now part of the protection/automation system and needs to be
+  tested accordingly
+* What to test?
+
+.. image:: static/network-testing.png
 
 Lessons Learned
 ===============
