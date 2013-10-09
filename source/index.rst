@@ -263,7 +263,7 @@ Logic Diagrams
    :scale: 200
 
 SCD File Engineering
------------------
+--------------------
 
 * Derived from functional specification and GOOSE spreadsheet
 * Perform GOOSE Mapping in Engineering Software
@@ -274,7 +274,7 @@ SCD File Engineering
    :scale: 100
 
 IED Configurations
---------------------
+------------------
 
 * Derived from functional specification, GOOSE spreadsheet, and logic 
   diagrams
@@ -292,5 +292,17 @@ Document Flow
 -------------
 
 .. image:: static/document-flow.svg
+
+Lessons Learned
+===============
+
+Project Status
+--------------
+
+* Phase I is complete
+* Phase II is being programmed
+
+What did we learn
+-----------------
 
 
