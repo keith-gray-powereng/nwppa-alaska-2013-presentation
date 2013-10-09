@@ -302,7 +302,46 @@ Project Status
 * Phase I is complete
 * Phase II is being programmed
 
-What did we learn
------------------
+Technical Challenges
+--------------------
 
+* Always map the quality associated with each piece of data in a 
+  GOOSE dataset
 
+  * Settings Change Failure Mode
+
+* Watch out for form 'a' contacts during a loss of relay power
+
+  * Relay still has enough 'juice' to send the state change via 
+    communications
+
+* Incompatabilities still exist between manufacturers. It is safer
+  to map all properties individually than as a structure
+
+  * Test set and relay mis-match
+
+* Use different logic variables for different schemes, even if
+  they appear to be doing the same thing
+
+  * Allows you the freedom to make changes to one scheme without affecting
+    the other scheme
+* Even if the PU/DO times are 0, map the timer output rather than the input
+
+  * Saves time later if you decide to make PU or DO nonzero
+
+* SER lists may not allow enough points to monitor everything
+* IEDs have limits to the number of transmit and receive GOOSE messages
+  they can accept
+* Double check the desired communications failure state
+
+Non-Technical Challenges
+------------------------
+
+* Expertise
+
+  * Facility engineering and maintenance personell probably won't know how
+    to investigate a problem and therefore fix it
+
+* Interaction between different disciplines
+
+  * SCADA/Protection/Substations/Testing
