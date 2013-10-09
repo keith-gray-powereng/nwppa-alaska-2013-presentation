@@ -100,7 +100,10 @@ Object Orientation
 * Models substation apparatus as software models
 * Standard naming convention
 
-.. image:: _static/breaker-model.png
+.. image:: static/breaker-model.png
+   :width: 766
+   :height: 861
+   :scale: 75
 
 Protection (GOOSE)
 ------------------
@@ -124,7 +127,10 @@ GOOSE (con't)
   is reached
 * Allows *Virtual Wire Monitoring*
 
-.. image:: _static/goose-timing-example.png
+.. image:: static/goose-timing-example.png
+   :width: 1325
+   :height: 800
+   :scale: 70
 
 Engineering Process
 -------------------
@@ -184,10 +190,107 @@ Reliability Improvements
 * Dual feed from the utility
 * Main-tie-tie-Main at Main Substation
 * Main-tie-Main at distribution substations
-* Redundant feeds down to load distribution centers
+* Redundant feeds to load distribution centers
 
 Scope
 -----
 
 * Substation Design
 * Transmission Line Design
+* Short-circuit and Arc Flash Studies -> Protective Relay Settings
+* Facility wide Electrical SCADA system
+* Communications Aided Scheme Design
+* Field Commissioning
+
+Communications Aided Schemes
+----------------------------
+
+* Breaker Failure
+* Transfer Trip
+* Islanding
+* Remote Metering
+* Remote Automatic and Manual Generator Synchronizing
+
+Design Process
+==============
+
+Functional Specifications
+-------------------------
+
+* Each scheme is documentented in a separate functional specification
+* How should the scheme work
+* Transmit/Receive GOOSE message contents
+* LED/Pushbutton/Display Message definitions
+* Hardware I/O
+* How should it fail
+* SCADA
+* Test Mode
+* SER
+
+GOOSE Mapping Spreadsheet
+-------------------------
+
+* Developed in two stages because the actual relay settings are not 
+  known at this time
+
+  #. Everything but specific relay word bits
+
+     * In Parallel to the functional specification
+
+  #. Relay word bits
+
+     * After bits have been assigned by relay programmer
+
+* Transmitting Relays on the left
+* Receiving relays across the top
+* Intersection shows the mapped data
+
+.. image:: static/goose-spreadsheet.png
+   :width: 948
+   :height: 211
+   :scale: 150
+
+Logic Diagrams
+--------------
+
+* Derived from the functional specification and GOOSE spreadsheet
+* Visual description of the logic used in the Communications Aided Schemes
+* Shows GOOSE transmit data and GOOSE receive data
+
+.. image:: static/logic-diagrams.png
+   :width: 497
+   :height: 185
+   :scale: 200
+
+SCD File Engineering
+-----------------
+
+* Derived from functional specification and GOOSE spreadsheet
+* Perform GOOSE Mapping in Engineering Software
+
+.. image:: static/goose-engineering.png
+   :width: 1186
+   :height: 427
+   :scale: 100
+
+IED Configurations
+--------------------
+
+* Derived from functional specification, GOOSE spreadsheet, and logic 
+  diagrams
+* Also includes "normal" protection settings
+
+Test Plans
+----------
+
+* Derived from functional specification and GOOSE spreadsheet
+* Test normal and failure modes of operation
+* May need separate test plans for bench test vs. field test
+
+
+Document Flow
+-------------
+
+.. image:: static/document-flow.svg
+
+
