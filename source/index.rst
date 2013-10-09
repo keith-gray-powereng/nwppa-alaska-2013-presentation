@@ -211,6 +211,52 @@ Communications Aided Schemes
 * Remote Metering
 * Remote Automatic and Manual Generator Synchronizing
 
+Breaker Failure
+---------------
+
+* Protective relay issues a trip
+* Breaker fails to open
+* Protective relay sends a 'Breaker Failure Trip' signal to all source
+  breaker relays on the bus
+* GOOSE only (N-1 analysis)
+* Some Results
+
+  * BFT received - BFT transmitted = 3ms
+  * Trip contact closed - BFT transmitted = 7ms
+  * Source breaker open - BFT transmitted = 50ms
+
+Transfer Trip
+-------------
+
+* Lowside main breaker relay sends transfer trip to highside breaker relay
+  to clear lowside ground faults and transformer faults
+* Redundant Channels - GOOSE and Vendor Specific
+* Partially tested at this point due to the state of Phase II
+
+Islanding
+---------
+
+* GOOSE Only
+* Monitors breaker status for all breakers between the generators and the
+  utility
+* Logic is performed to tell the control system whether the unit is
+  connected to the utlity or not
+
+Remote Metering
+---------------
+
+* GOOSE Only
+* Analog data is transmitted from the main transformers to the CoGen
+  where net metering calculations are performed
+* Net metering values are sent to the DCS
+
+Generator Synchronization
+-------------------------
+
+* Breaker statuses are monitored to determine which generator to control
+* Automatic synchronizing done via GOOSE
+* Manual synchronizing done via vendor specific protocol
+
 Design Process
 ==============
 
@@ -226,6 +272,12 @@ Functional Specifications
 * SCADA
 * Test Mode
 * SER
+
+Functional Specification Example
+--------------------------------
+
+.. image:: static/functional-spec-3.png
+
 
 GOOSE Mapping Spreadsheet
 -------------------------
@@ -287,11 +339,24 @@ Test Plans
 * Test normal and failure modes of operation
 * May need separate test plans for bench test vs. field test
 
+.. image:: static/test-plan.png
+   :width: 614
+   :height: 378
+   :scale: 175
 
 Document Flow
 -------------
 
 .. image:: static/document-flow.svg
+
+Team Structure
+--------------
+
+.. image:: static/team-structure.png
+   :width: 399
+   :height: 166
+   :scale: 300
+
 
 Lessons Learned
 ===============
