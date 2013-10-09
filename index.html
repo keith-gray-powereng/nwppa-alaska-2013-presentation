@@ -1930,31 +1930,22 @@ body {
    background. This prevents elements from extending
    beyond the edge of the printed page, and prevents
    unnecessary background images from printing */
-
-* {
-	-webkit-print-color-adjust: exact;
-}
-
 body {
-	font-size: 18pt;
-	width: 297mm;
-	height: 229mm;
-	margin: 0 auto !important;
+	background: #fff;
+	font-size: 13pt;
+	width: auto;
+	height: auto;
 	border: 0;
+	margin: 0 5%;
 	padding: 0;
 	float: none !important;
 	overflow: visible;
 }
-
 html {
-	width: 100%;
-	height: 100%;
+	background: #fff;
+	width: auto;
+	height: auto;
 	overflow: visible;
-}
-
-@page {
-	size: letter landscape;
-	margin: 0;
 }
 
 /* SECTION 2: Remove any elements not needed in print.
@@ -1971,30 +1962,49 @@ html {
 
 /* SECTION 3: Set body font face, size, and color.
    Consider using a serif font for readability. */
-body, p, td, li, div {
-	font-size: 18pt;
+body, p, td, li, div, a {
+	font-size: 16pt!important;
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+	color: #000;
 }
 
 /* SECTION 4: Set heading font face, sizes, and color.
    Differentiate your headings from your body text.
    Perhaps use a large sans-serif for distinction. */
 h1,h2,h3,h4,h5,h6 {
+	color: #000!important;
+	height: auto;
+	line-height: normal;
+	font-family: Georgia, "Times New Roman", Times, serif !important;
 	text-shadow: 0 0 0 #000 !important;
+	text-align: left;
+	letter-spacing: normal;
 }
+/* Need to reduce the size of the fonts for printing */
+h1 { font-size: 26pt !important;  }
+h2 { font-size: 22pt !important; }
+h3 { font-size: 20pt !important; }
+h4 { font-size: 20pt !important; font-variant: small-caps; }
+h5 { font-size: 19pt !important; }
+h6 { font-size: 18pt !important; font-style: italic; }
 
 /* SECTION 5: Make hyperlinks more usable.
    Ensure links are underlined, and consider appending
    the URL to the end of the link for usability. */
 a:link,
 a:visited {
+	color: #000 !important;
 	font-weight: bold;
 	text-decoration: underline;
 }
-
-.reveal pre code {
-	overflow: hidden !important;
-	font-family: monospace !important;
+/*
+.reveal a:link:after,
+.reveal a:visited:after {
+	content: " (" attr(href) ") ";
+	color: #222 !important;
+	font-size: 90%;
 }
+*/
 
 
 /* SECTION 6: more reveal.js specific additions by @skypanther */
@@ -2006,27 +2016,23 @@ ul, ol, div, p {
 	display: block;
 	overflow: visible;
 	margin: auto;
-}
-.reveal {
-	width: auto !important;
-	height: auto !important;
-	overflow: hidden !important;
+	text-align: left !important;
 }
 .reveal .slides {
 	position: static;
-	width: 100%;
+	width: auto;
 	height: auto;
 
 	left: auto;
 	top: auto;
-	margin: 0 !important;
-	padding: 0 !important;
+	margin-left: auto;
+	margin-top: auto;
+	padding: auto;
 
 	overflow: visible;
 	display: block;
 
 	text-align: center;
-
 	-webkit-perspective: none;
 	   -moz-perspective: none;
 	    -ms-perspective: none;
@@ -2037,23 +2043,21 @@ ul, ol, div, p {
 	    -ms-perspective-origin: 50% 50%;
 	        perspective-origin: 50% 50%;
 }
-.reveal .slides section {
-
-	page-break-after: always !important;
+.reveal .slides>section,
+.reveal .slides>section>section {
 
 	visibility: visible !important;
-	position: relative !important;
-	width: 100% !important;
-	height: 229mm !important;
-	min-height: 229mm !important;
+	position: static !important;
+	width: 90% !important;
+	height: auto !important;
 	display: block !important;
-	overflow: hidden !important;
+	overflow: visible !important;
 
-	left: 0 !important;
-	top: 0 !important;
-	margin: 0 !important;
-	padding: 2cm 2cm 0 2cm !important;
-	box-sizing: border-box !important;
+	left: 0% !important;
+	top: 0% !important;
+	margin-left: 0px !important;
+	margin-top: 0px !important;
+	padding: 20px 0px !important;
 
 	opacity: 1 !important;
 
@@ -2067,16 +2071,9 @@ ul, ol, div, p {
 	    -ms-transform: none !important;
 	        transform: none !important;
 }
-.reveal section.stack {
-	margin: 0 !important;
-	padding: 0 !important;
-	page-break-after: avoid !important;
-	height: auto !important;
-	min-height: auto !important;
-}
-.reveal .absolute-element {
-	margin-left: 2.2cm;
-	margin-top: 1.8cm;
+.reveal section {
+	page-break-after: always !important;
+	display: block !important;
 }
 .reveal section .fragment {
 	opacity: 1 !important;
@@ -2087,28 +2084,16 @@ ul, ol, div, p {
 	    -ms-transform: none !important;
 	        transform: none !important;
 }
-.reveal section .slide-background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 0;
+.reveal section:last-of-type {
+	page-break-after: avoid !important;
 }
-.reveal section>* {
-	position: relative;
-	z-index: 1;
-}
-.reveal img {
+.reveal section img {
+	display: block;
+	margin: 15px 0px;
+	background: rgba(255,255,255,1);
+	border: 1px solid #666;
 	box-shadow: none;
-}
-.reveal .roll {
-	overflow: visible;
-	line-height: 1em;
-}
-.reveal small a {
-	font-size: 16pt !important;
-}
-</style><style media="screen" type="text/css">.hide-title>header{
+}</style><style media="screen" type="text/css">.hide-title>header{
  display: none
 }
 </style></head><body class="reveal"><div class="slides"><section id="iec-61850-goose-project-start-to-finish"><header><h2><a href="#id1">IEC 61850 GOOSE Project - Start to Finish</a></h2></header></section><section id="outline"><header><h2><a href="#id2">Outline</a></h2></header><div class="contents" id="contents"><h3>Contents</h3><ul><li><p><a class="reference internal" href="#iec-61850-goose-project-start-to-finish" id="id1">IEC 61850 GOOSE Project - Start to Finish</a></p></li><li><p><a class="reference internal" href="#outline" id="id2">Outline</a></p></li><li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p></li><li><p><a class="reference internal" href="#iec-61850-review" id="id4">IEC 61850 Review</a></p></li><li><p><a class="reference internal" href="#project-description" id="id5">Project Description</a></p></li><li><p><a class="reference internal" href="#design-process" id="id6">Design Process</a></p></li><li><p><a class="reference internal" href="#testing" id="id7">Testing</a></p></li><li><p><a class="reference internal" href="#lessons-learned" id="id8">Lessons Learned</a></p></li></ul></div></section><section id="introduction"><header><h2><a href="#id3">Introduction</a></h2></header><section id="who-am-i"><header><h3>Who am I?</h3></header><ul><li><p>Keith Gray (<a class="reference external" href="mailto:keith.gray@powereng.com">keith.gray@powereng.com</a>)</p></li><li><p>SCADA and Protection Engineer for 8+ years</p></li><li><p>4+ years of experience with IEC 61850</p></li><li><p>On initial team for company IEC 61850 Lab</p></li></ul></section><section id="what-am-i-going-to-talk-about-today"><header><h3>What am I going to talk about today?</h3></header><ul><li><p>IEC 61850 GOOSE Review</p></li><li><p>Description of the Project</p></li><li><p>Description of the Communications Aided Schemes</p></li><li><p>IEC 61850 GOOSE Implementation</p><ul><li><p>Team Structure</p></li><li><p>Documentation</p></li><li><p>Implementation</p></li><li><p>Testing</p></li><li><p>Lessons Learned</p></li></ul></li><li><p>Questions</p></li></ul></section></section><section id="iec-61850-review"><header><h2><a href="#id4">IEC 61850 Review</a></h2></header><section id="the-standard"><header><h3>The Standard</h3></header><ul><li><p>International Standard</p><ul><li><p>Carries IEC name but is derived from work done in the US
