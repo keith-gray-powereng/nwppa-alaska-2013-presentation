@@ -1776,39 +1776,42 @@ body {
 }
 
 
-</style><style media="screen" type="text/css">@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+</style><style media="screen" type="text/css">@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
- * Sky theme for reveal.js.
+ * Default theme for reveal.js.
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-.reveal a:not(.image) {
-  line-height: 1.3em; }
+@font-face {
+  font-family: 'League Gothic';
+  src: url("../../lib/font/league_gothic-webfont.eot");
+  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #add9e4;
-  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
-  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background-color: #f7fbfc; }
+  background: #1c1e20;
+  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
+  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
+  background-color: #2b2b2b; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: #333333; }
+  color: #eeeeee; }
 
 ::selection {
   color: white;
-  background: #134674;
+  background: #ff5e99;
   text-shadow: none; }
 
 /*********************************************
@@ -1821,21 +1824,21 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333333;
-  font-family: "Quicksand", sans-serif;
+  color: #eeeeee;
+  font-family: "League Gothic", Impact, sans-serif;
   line-height: 0.9em;
-  letter-spacing: -0.08em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-shadow: none; }
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #3b759e;
+  color: #13daec;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -1844,13 +1847,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #74a7cb;
+  color: #71e9f4;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #264c66; }
+  background: #0d99a5; }
 
 /*********************************************
  * IMAGES
@@ -1858,7 +1861,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333333;
+  border: 4px solid #eeeeee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -1868,7 +1871,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #3b759e;
+  border-color: #13daec;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -1876,31 +1879,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #3b759e; }
+  border-right-color: #13daec; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #3b759e; }
+  border-left-color: #13daec; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #3b759e; }
+  border-bottom-color: #13daec; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #3b759e; }
+  border-top-color: #13daec; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #74a7cb; }
+  border-right-color: #71e9f4; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #74a7cb; }
+  border-left-color: #71e9f4; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #74a7cb; }
+  border-bottom-color: #71e9f4; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #74a7cb; }
+  border-top-color: #71e9f4; }
 
 /*********************************************
  * PROGRESS BAR
@@ -1909,7 +1912,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #3b759e;
+  background: #13daec;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -2108,7 +2111,7 @@ ul, ol, div, p {
 </style><style media="screen" type="text/css">.hide-title>header{
  display: none
 }
-</style></head><body class="reveal"><div class="slides"><section id="iec-61850-goose-project-start-to-finish"><header><h2><a href="#id1">IEC 61850 GOOSE Project - Start to Finish</a></h2></header></section><section id="outline"><header><h2><a href="#id2">Outline</a></h2></header><div class="contents" id="contents"><h3>Contents</h3><ul><li><p><a class="reference internal" href="#iec-61850-goose-project-start-to-finish" id="id1">IEC 61850 GOOSE Project - Start to Finish</a></p></li><li><p><a class="reference internal" href="#outline" id="id2">Outline</a></p></li><li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p></li><li><p><a class="reference internal" href="#iec-61850-review" id="id4">IEC 61850 Review</a></p></li><li><p><a class="reference internal" href="#project-description" id="id5">Project Description</a></p></li><li><p><a class="reference internal" href="#design-process" id="id6">Design Process</a></p></li><li><p><a class="reference internal" href="#lessons-learned" id="id7">Lessons Learned</a></p></li></ul></div></section><section id="introduction"><header><h2><a href="#id3">Introduction</a></h2></header><section id="who-am-i"><header><h3>Who am I?</h3></header><ul><li><p>Keith Gray (<a class="reference external" href="mailto:keith.gray@powereng.com">keith.gray@powereng.com</a>)</p></li><li><p>SCADA and Protection Engineer for 8+ years</p></li><li><p>4+ years of experience with IEC 61850</p></li><li><p>On initial team for company IEC 61850 Lab</p></li></ul></section><section id="what-am-i-going-to-talk-about-today"><header><h3>What am I going to talk about today?</h3></header><ul><li><p>IEC 61850 GOOSE Review</p></li><li><p>Description of the Project</p></li><li><p>Description of the Communications Aided Schemes</p></li><li><p>IEC 61850 GOOSE Implementation</p><ul><li><p>Team Structure</p></li><li><p>Documentation</p></li><li><p>Implementation</p></li><li><p>Testing</p></li><li><p>Lessons Learned</p></li></ul></li><li><p>Questions</p></li></ul></section></section><section id="iec-61850-review"><header><h2><a href="#id4">IEC 61850 Review</a></h2></header><section id="the-standard"><header><h3>The Standard</h3></header><ul><li><p>International Standard</p><ul><li><p>Carries IEC name but is derived from work done in the US
+</style></head><body class="reveal"><div class="slides"><section id="iec-61850-goose-project-start-to-finish"><header><h2><a href="#id1">IEC 61850 GOOSE Project - Start to Finish</a></h2></header></section><section id="outline"><header><h2><a href="#id2">Outline</a></h2></header><div class="contents" id="contents"><h3>Contents</h3><ul><li><p><a class="reference internal" href="#iec-61850-goose-project-start-to-finish" id="id1">IEC 61850 GOOSE Project - Start to Finish</a></p></li><li><p><a class="reference internal" href="#outline" id="id2">Outline</a></p></li><li><p><a class="reference internal" href="#introduction" id="id3">Introduction</a></p></li><li><p><a class="reference internal" href="#iec-61850-review" id="id4">IEC 61850 Review</a></p></li><li><p><a class="reference internal" href="#project-description" id="id5">Project Description</a></p></li><li><p><a class="reference internal" href="#design-process" id="id6">Design Process</a></p></li><li><p><a class="reference internal" href="#testing" id="id7">Testing</a></p></li><li><p><a class="reference internal" href="#lessons-learned" id="id8">Lessons Learned</a></p></li></ul></div></section><section id="introduction"><header><h2><a href="#id3">Introduction</a></h2></header><section id="who-am-i"><header><h3>Who am I?</h3></header><ul><li><p>Keith Gray (<a class="reference external" href="mailto:keith.gray@powereng.com">keith.gray@powereng.com</a>)</p></li><li><p>SCADA and Protection Engineer for 8+ years</p></li><li><p>4+ years of experience with IEC 61850</p></li><li><p>On initial team for company IEC 61850 Lab</p></li></ul></section><section id="what-am-i-going-to-talk-about-today"><header><h3>What am I going to talk about today?</h3></header><ul><li><p>IEC 61850 GOOSE Review</p></li><li><p>Description of the Project</p></li><li><p>Description of the Communications Aided Schemes</p></li><li><p>IEC 61850 GOOSE Implementation</p><ul><li><p>Team Structure</p></li><li><p>Documentation</p></li><li><p>Implementation</p></li><li><p>Testing</p></li><li><p>Lessons Learned</p></li></ul></li><li><p>Questions</p></li></ul></section></section><section id="iec-61850-review"><header><h2><a href="#id4">IEC 61850 Review</a></h2></header><section id="the-standard"><header><h3>The Standard</h3></header><ul><li><p>International Standard</p><ul><li><p>Carries IEC name but is derived from work done in the US
 by IEEE/EPRI called UCA 2.0</p></li><li><p>12+ Sections</p></li><li><p>Some sections are at Edition 1 and some are at Edition 2</p></li></ul></li></ul></section><section id="the-standard-con-t"><header><h3>The Standard (con't)</h3></header><ul><li><p>Covers wide range of topics</p><ul><li><p>System and Project Management</p></li><li><p>Engineering Tools</p></li><li><p>Data Modeling</p></li><li><p>Hardware Requirements</p></li><li><p>Product Lifecycle</p></li><li><p>Conformance Testing</p></li><li><p>Communication Structure</p></li></ul></li><li><p>Related standards cover</p><ul><li><p>Security</p></li><li><p>Switchgear</p></li><li><p>and more</p></li></ul></li></ul></section><section id="promise-of-iec-61850"><header><h3>Promise of IEC 61850</h3></header><ul><li><p><strong>Interoperability</strong></p></li><li><p><strong>NOT</strong> <em>Interchangeability</em></p></li><li><p>Copper Removal</p></li><li><p>Design Time Reduction</p></li></ul></section><section id="communication-structure"><header><h3>Communication Structure</h3></header><ul><li><p>Station Bus</p><ul><li><p>SCADA Protocol (MMS)</p><ul><li><p>Client-Server Model</p></li></ul></li><li><p>Protection Protocol (GOOSE)</p><ul><li><p>Peer-Peer Model</p></li></ul></li></ul></li><li><p>Process Bus</p><ul><li><p>Sampled Values (SMV)</p></li></ul></li></ul></section><section id="object-orientation"><header><h3>Object Orientation</h3></header><ul><li><p>Models substation apparatus as software models</p></li><li><p>Standard naming convention</p></li></ul><img alt="static/breaker-model.png" src="static/breaker-model.png" style="width: 574.5px; height: 645.75px;"></section><section id="protection-goose"><header><h3>Protection (GOOSE)</h3></header><ul><li><p>Generic Object Oriented Substation Event</p></li><li><p>Unsolicited transmission of any IEC 61850 object (Analog and/or Binary)</p></li><li><p>Peer-Peer</p></li><li><p>Publish-Subscribe</p></li><li><p>Directly from Application Layer to Data Link Layer</p><ul><li><p>No TCP/UDP/IP</p></li><li><p>Direct Ethernet Protocol</p></li><li><p>FAST</p></li></ul></li></ul></section><section id="goose-con-t"><header><h3>GOOSE (con't)</h3></header><ul><li><p>Messages repeated at regular interval</p></li><li><p>Data change event causes message to be published immediately</p></li><li><p>Repeated at gradually larger interval until steady state repeate time
 is reached</p></li><li><p>Allows <em>Virtual Wire Monitoring</em></p></li></ul><img alt="static/goose-timing-example.png" src="static/goose-timing-example.png" style="width: 927.5px; height: 560.0px;"></section><section id="engineering-process"><header><h3>Engineering Process</h3></header><ul><li><p>Multiple steps</p></li><li><p>Iterative</p></li><li><p>Multiple software applications</p></li><li><p>Defined in Section 6 of the IEC 61850 Standard</p></li></ul></section><section id="process-overview"><header><h3>Process Overview</h3></header><ol class="arabic"><li><p>IED configuration tool provides a template file for each IED</p></li><li><p>System configuration tool imports all IED template files</p></li><li><p>Egnineer performs GOOSE configuration in the system configuration tool</p></li><li><p>System configuration tool exports the substation configuration file</p></li><li><p>IED configuration tool imports the substation configuration file and
 sends the IED configuration to each IED</p></li></ol></section><section id="substation-configuration-language"><header><h3>Substation Configuration Language</h3></header><dl><dt><strong>ICD - IED Configuration Description</strong></dt><dd><p>The ICD file is a template file for each IED. It can be provided by
@@ -2123,7 +2126,12 @@ utility</p></li><li><p>Logic is performed to tell the control system whether the
 connected to the utlity or not</p></li></ul></section><section id="remote-metering"><header><h3>Remote Metering</h3></header><ul><li><p>GOOSE Only</p></li><li><p>Analog data is transmitted from the main transformers to the CoGen
 where net metering calculations are performed</p></li><li><p>Net metering values are sent to the DCS</p></li></ul></section><section id="generator-synchronization"><header><h3>Generator Synchronization</h3></header><ul><li><p>Breaker statuses are monitored to determine which generator to control</p></li><li><p>Automatic synchronizing done via GOOSE</p></li><li><p>Manual synchronizing done via vendor specific protocol</p></li></ul></section></section><section id="design-process"><header><h2><a href="#id6">Design Process</a></h2></header><section id="functional-specifications"><header><h3>Functional Specifications</h3></header><ul><li><p>Each scheme is documentented in a separate functional specification</p></li><li><p>How should the scheme work</p></li><li><p>Transmit/Receive GOOSE message contents</p></li><li><p>LED/Pushbutton/Display Message definitions</p></li><li><p>Hardware I/O</p></li><li><p>How should it fail</p></li><li><p>SCADA</p></li><li><p>Test Mode</p></li><li><p>SER</p></li></ul></section><section id="functional-specification-example"><header><h3>Functional Specification Example</h3></header><img alt="static/functional-spec-3.png" src="static/functional-spec-3.png"></section><section id="goose-mapping-spreadsheet"><header><h3>GOOSE Mapping Spreadsheet</h3></header><ul><li><p>Developed in two stages because the actual relay settings are not
 known at this time</p><ol class="arabic"><li><p>Everything but specific relay word bits</p><ul><li><p>In Parallel to the functional specification</p></li></ul></li><li><p>Relay word bits</p><ul><li><p>After bits have been assigned by relay programmer</p></li></ul></li></ol></li><li><p>Transmitting Relays on the left</p></li><li><p>Receiving relays across the top</p></li><li><p>Intersection shows the mapped data</p></li></ul><img alt="static/goose-spreadsheet.png" src="static/goose-spreadsheet.png" style="width: 1422.0px; height: 316.5px;"></section><section id="logic-diagrams"><header><h3>Logic Diagrams</h3></header><ul><li><p>Derived from the functional specification and GOOSE spreadsheet</p></li><li><p>Visual description of the logic used in the Communications Aided Schemes</p></li><li><p>Shows GOOSE transmit data and GOOSE receive data</p></li></ul><img alt="static/logic-diagrams.png" src="static/logic-diagrams.png" style="width: 994.0px; height: 370.0px;"></section><section id="scd-file-engineering"><header><h3>SCD File Engineering</h3></header><ul><li><p>Derived from functional specification and GOOSE spreadsheet</p></li><li><p>Perform GOOSE Mapping in Engineering Software</p></li></ul><img alt="static/goose-engineering.png" src="static/goose-engineering.png" style="width: 1186.0px; height: 427.0px;"></section><section id="ied-configurations"><header><h3>IED Configurations</h3></header><ul><li><p>Derived from functional specification, GOOSE spreadsheet, and logic
-diagrams</p></li><li><p>Also includes "normal" protection settings</p></li></ul></section><section id="test-plans"><header><h3>Test Plans</h3></header><ul><li><p>Derived from functional specification and GOOSE spreadsheet</p></li><li><p>Test normal and failure modes of operation</p></li><li><p>May need separate test plans for bench test vs. field test</p></li></ul><img alt="static/test-plan.png" src="static/test-plan.png" style="width: 1074.5px; height: 661.5px;"></section><section id="document-flow"><header><h3>Document Flow</h3></header><object data="static/document-flow.svg" type="image/svg+xml">static/document-flow.svg</object></section><section id="team-structure"><header><h3>Team Structure</h3></header><img alt="static/team-structure.png" src="static/team-structure.png" style="width: 1197.0px; height: 498.0px;"></section></section><section id="lessons-learned"><header><h2><a href="#id7">Lessons Learned</a></h2></header><section id="project-status"><header><h3>Project Status</h3></header><ul><li><p>Phase I is complete</p></li><li><p>Phase II is being programmed</p></li></ul></section><section id="technical-challenges"><header><h3>Technical Challenges</h3></header><ul><li><p>Always map the quality associated with each piece of data in a
+diagrams</p></li><li><p>Also includes "normal" protection settings</p></li></ul></section><section id="test-plans"><header><h3>Test Plans</h3></header><ul><li><p>Derived from functional specification and GOOSE spreadsheet</p></li><li><p>Test normal and failure modes of operation</p></li><li><p>May need separate test plans for bench test vs. field test</p></li></ul><img alt="static/test-plan.png" src="static/test-plan.png" style="width: 1074.5px; height: 661.5px;"></section><section id="document-flow"><header><h3>Document Flow</h3></header><object data="static/document-flow.svg" type="image/svg+xml">static/document-flow.svg</object></section><section id="team-structure"><header><h3>Team Structure</h3></header><img alt="static/team-structure.png" src="static/team-structure.png" style="width: 1197.0px; height: 498.0px;"></section></section><section id="testing"><header><h2><a href="#id7">Testing</a></h2></header><section id="site-testing"><header><h3>Site Testing</h3></header><ul><li><p>Engineers who programmed the system were on site to commission it</p></li><li><p>Most, but not all, devices were available and connected</p></li><li><p>Unavailable devices were simulated using a test set capable of publishing
+and subscribing to GOOSE messages</p></li><li><p>Test plans were followed, variances were noted and reviewed</p></li><li><p>SERs were captured at each step in the test plan</p></li></ul></section><section id="test-mode"><header><h3>Test Mode</h3></header><ul><li><p>Need a method of testing a relay without causing actions in receiving
+relays</p></li><li><p>Similar to test switches</p></li><li><p>Only meant to be used when the protected device is out of service</p><ul><li><p>Breaker racked out or disconnect switches open</p></li><li><p>Not meant to be use on an in-service relay</p></li></ul></li><li><p>Transmitting relay is placed into test mode</p></li><li><p>Test mode indication is transmitted with each GOOSE message</p></li><li><p>If test mode is enabled, the receiving relay ignores the data in the
+incoming GOOSE message</p></li><li><p>All receiving relays indicate they see the transmitting relay in test mode</p></li><li><p>SCADA indicates a relay is in test mode and that all receiving relays
+agree</p></li></ul></section><section id="network-testing"><header><h3>Network Testing</h3></header><ul><li><p>Network is now part of the protection/automation system and needs to be
+tested accordingly</p></li><li><p>What to test?</p></li></ul><img alt="static/network-testing.png" src="static/network-testing.png"></section></section><section id="lessons-learned"><header><h2><a href="#id8">Lessons Learned</a></h2></header><section id="project-status"><header><h3>Project Status</h3></header><ul><li><p>Phase I is complete</p></li><li><p>Phase II is being programmed</p></li></ul></section><section id="technical-challenges"><header><h3>Technical Challenges</h3></header><ul><li><p>Always map the quality associated with each piece of data in a
 GOOSE dataset</p><ul><li><p>Settings Change Failure Mode</p></li></ul></li><li><p>Watch out for form 'a' contacts during a loss of relay power</p><ul><li><p>Relay still has enough 'juice' to send the state change via
 communications</p></li></ul></li><li><p>Incompatabilities still exist between manufacturers. It is safer
 to map all properties individually than as a structure</p><ul><li><p>Test set and relay mis-match</p></li></ul></li><li><p>Use different logic variables for different schemes, even if
