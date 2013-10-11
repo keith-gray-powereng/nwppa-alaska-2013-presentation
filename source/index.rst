@@ -82,6 +82,7 @@ Promise of IEC 61850
 * **NOT** *Interchangeability*
 * Copper Removal
 * Design Time Reduction
+* Flexibility
 
 Communication Structure
 -----------------------
